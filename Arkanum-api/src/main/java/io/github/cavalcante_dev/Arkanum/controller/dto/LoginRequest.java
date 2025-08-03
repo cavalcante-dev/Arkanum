@@ -1,4 +1,4 @@
-package io.github.cavalcante_dev.Arcanum.controller.dto;
+package io.github.cavalcante_dev.Arkanum.controller.dto;
 
 public record LoginRequest(String username, String password) {
 }

@@ -1,4 +1,4 @@
-package io.github.cavalcante_dev.Arcanum;
+package io.github.cavalcante_dev.Arkanum;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

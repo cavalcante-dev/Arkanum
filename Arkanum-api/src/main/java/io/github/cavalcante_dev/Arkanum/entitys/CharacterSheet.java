@@ -1,18 +1,22 @@
-package io.github.cavalcante_dev.Arcanum.entitys;
+package io.github.cavalcante_dev.Arkanum.entitys;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.Instant;
 
+// Entidade de ficha de personagem é criada e associada ao usuário
+
 @Entity
-@Table(name = "tb_chatacter-sheet")
+@Table(name = "tb_chatacterSheet")
 public class CharacterSheet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "character_id")
     private Long characterId;
+
+    // Determina o ID do usuário que a criou.
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -21,13 +25,15 @@ public class CharacterSheet {
     private String name;
     private Integer characterClass;
     private Integer characterLevel;
-    // private String characterImg;
+    // private String characterImg; - Adicionar posteriormente
 
     @CreationTimestamp
     private Instant createdTimeStamp;
 
     public CharacterSheet() {
     }
+
+    // Getters and Setters
 
     public User getUser() {
         return user;

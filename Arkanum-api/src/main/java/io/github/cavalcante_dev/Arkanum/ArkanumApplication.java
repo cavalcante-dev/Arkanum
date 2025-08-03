@@ -1,4 +1,4 @@
-package io.github.cavalcante_dev.Arcanum;
+package io.github.cavalcante_dev.Arkanum;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ArkanumApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ArcanumApplication.class, args);
+		SpringApplication.run(ArkanumApplication.class, args);
 	}
 
 }

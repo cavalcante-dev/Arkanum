@@ -4,8 +4,8 @@ services:
     image: 'mysql:latest'
     environment:
       - 'MYSQL_DATABASE=arcanum'
-      - 'MYSQL_PASSWORD=2506'
-      - 'MYSQL_ROOT_PASSWORD=2506'
-      - 'MYSQL_USER=myuser'
+      - 'MYSQL_PASSWORD=2569'
+      - 'MYSQL_ROOT_PASSWORD=2569'
+      - 'MYSQL_USER=ARKANUMCODEX'
     ports:
       - '3306'

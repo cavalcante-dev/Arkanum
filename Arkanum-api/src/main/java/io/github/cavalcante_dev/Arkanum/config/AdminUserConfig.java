@@ -1,10 +1,11 @@
-package io.github.cavalcante_dev.Arcanum.config;
+package io.github.cavalcante_dev.Arkanum.config;
 
-import io.github.cavalcante_dev.Arcanum.entitys.Role;
-import io.github.cavalcante_dev.Arcanum.entitys.User;
-import io.github.cavalcante_dev.Arcanum.repository.RoleRepository;
-import io.github.cavalcante_dev.Arcanum.repository.UserRepository;
+import io.github.cavalcante_dev.Arkanum.entitys.Role;
+import io.github.cavalcante_dev.Arkanum.entitys.User;
+import io.github.cavalcante_dev.Arkanum.repository.RoleRepository;
+import io.github.cavalcante_dev.Arkanum.repository.UserRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -31,7 +32,16 @@ public class AdminUserConfig implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         var roleAdmin = roleRepository.findByName(Role.Values.ADMIN.name());
+
+        if (roleAdmin == null) {
+            roleAdmin = new Role();
+            roleAdmin.setName(Role.Values.ADMIN.name());
+            roleRepository.save(roleAdmin);
+        }
+
         var userAdmin = userRepository.findByUsername("admin");
+
+        Role finalRoleAdmin = roleAdmin;
 
         userAdmin.ifPresentOrElse(
                 user -> {
@@ -41,7 +51,7 @@ public class AdminUserConfig implements CommandLineRunner {
                     var user = new User();
                     user.setUsername("admin");
                     user.setPassword(passwordEncoder.encode("2569"));
-                    user.setRole(Set.of(roleAdmin));
+                    user.setRole(Set.of(finalRoleAdmin));
                     userRepository.save(user);
                 }
         );
