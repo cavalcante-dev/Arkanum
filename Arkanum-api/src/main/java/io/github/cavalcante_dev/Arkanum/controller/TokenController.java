@@ -1,9 +1,9 @@
-package io.github.cavalcante_dev.Arcanum.controller;
+package io.github.cavalcante_dev.Arkanum.controller;
 
-import io.github.cavalcante_dev.Arcanum.controller.dto.LoginRequest;
-import io.github.cavalcante_dev.Arcanum.controller.dto.LoginResponse;
-import io.github.cavalcante_dev.Arcanum.entitys.Role;
-import io.github.cavalcante_dev.Arcanum.repository.UserRepository;
+import io.github.cavalcante_dev.Arkanum.controller.dto.LoginRequest;
+import io.github.cavalcante_dev.Arkanum.controller.dto.LoginResponse;
+import io.github.cavalcante_dev.Arkanum.entitys.Role;
+import io.github.cavalcante_dev.Arkanum.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Instant;
 import java.util.stream.Collectors;
+
+// Controlador do Token JWT para validação de informações de login.
 
 @RestController
 public class TokenController {
@@ -32,6 +34,8 @@ public class TokenController {
         this.passwordEncoder = passwordEncoder;
     }
 
+    // Login do usuário.
+
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
 
@@ -41,15 +45,19 @@ public class TokenController {
             throw new BadCredentialsException("User or Password is invalid!");
         }
 
+        // Tempo de Expiração do token.
+
         var now = Instant.now();
         var expiresIn = 300L;
+
+        // Define o escopo que será mostrado no JWT
 
         var scopes = user.get().getRole()
                 .stream()
                 .map(Role::getName)
                 .collect(Collectors.joining(" "));
 
-        System.out.println(scopes);
+        // Construtor das informações do TOKEN JWT
 
         var claims = JwtClaimsSet.builder()
                 .issuer("arcanum")
@@ -58,8 +66,6 @@ public class TokenController {
                 .expiresAt(now.plusSeconds(expiresIn))
                 .claim("scope", scopes)
                 .build();
-
-        System.out.println(claims);
 
         var jwtValeu = jwtEncoder.encode(JwtEncoderParameters.from(claims)).getTokenValue();
 

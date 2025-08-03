@@ -1,6 +1,6 @@
-package io.github.cavalcante_dev.Arcanum.repository;
+package io.github.cavalcante_dev.Arkanum.repository;
 
-import io.github.cavalcante_dev.Arcanum.entitys.User;
+import io.github.cavalcante_dev.Arkanum.entitys.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
