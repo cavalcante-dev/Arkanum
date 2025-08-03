@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"58005e73339257f3","type":"text","text":"##### Personagem\n-*id*: UUID\n-*name*: string\n-*level*: interger\n-*class*: string\n-*spellsSlots*: hash\n\t\t-[nivel: espaços]\n-*spellsKnown*: matriz\n\t-[nivel: nome]\n-*charImg*: string\n-*usedSlots*: hash \n\t-[nivel: usados]\n-----------------------------\n+calculateSpellsSlots(*level*, *class*): *spellsSlots*[nivel: espaços]","x":0,"y":-210,"width":340,"height":480},
+		{"id":"5c58cbcb31d711fb","type":"text","text":"##### Usuário\n-*id*: UUID\n-*name*: string\n-*username*: string\n-*email*: string\n-*password*: string\n\n----------------------------\n\n+createCharacter(*characterID*)\n+editCharacter(*characterID*)\n+deleteCharacter(*characterID*)\n+saveSpellList(*spellsKnown*)\n+saveSpellSlots(*usedSlots*)","x":-400,"y":-180,"width":280,"height":420}
+	],
+	"edges":[
+		{"id":"574bc16e6aac2485","fromNode":"5c58cbcb31d711fb","fromSide":"right","toNode":"58005e73339257f3","toSide":"left","fromEnd":"arrow","label":"1 / *"}
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"975a2f027e30dadd","x":-320,"y":-100,"width":250,"height":60,"type":"text","text":"Criar personagem"},
+		{"id":"5c70dbfc1286570d","x":-320,"y":-10,"width":250,"height":60,"type":"text","text":"Adicionar magias a lista"},
+		{"id":"934699621fba5adb","x":-320,"y":150,"width":250,"height":60,"type":"text","text":"Excluir magia"},
+		{"id":"d7bad88938074d08","x":20,"y":150,"width":250,"height":60,"type":"text","text":"Ver descrição da magia"},
+		{"id":"47f60f3822d432ce","x":100,"y":-100,"width":250,"height":60,"type":"text","text":"Excluir personagem"},
+		{"id":"6674a865ef81ec50","x":100,"y":-220,"width":250,"height":60,"type":"text","text":"Editar personagem"},
+		{"id":"227cadb9e0a209cd","x":-320,"y":-220,"width":250,"height":60,"type":"text","text":"Fazer login"},
+		{"id":"156710187cb064b3","x":-335,"y":-360,"width":280,"height":60,"type":"text","text":"Lidar com \"Esqueci a Senha\""},
+		{"id":"04364829bdc29fd2","x":-640,"y":-40,"width":180,"height":60,"color":"2","type":"text","text":"ATOR: Usuário"}
+	],
+	"edges":[
+		{"id":"55bf60951a843df0","fromNode":"6674a865ef81ec50","fromSide":"left","toNode":"975a2f027e30dadd","toSide":"right","label":"includes"},
+		{"id":"305c5c0df4ba3a5c","fromNode":"47f60f3822d432ce","fromSide":"left","toNode":"975a2f027e30dadd","toSide":"right","label":"includes"},
+		{"id":"110c441a4ed32c71","fromNode":"934699621fba5adb","fromSide":"top","toNode":"5c70dbfc1286570d","toSide":"bottom","label":"includes"},
+		{"id":"6453bd268107fa4b","fromNode":"d7bad88938074d08","fromSide":"left","toNode":"5c70dbfc1286570d","toSide":"right","label":"includes"},
+		{"id":"0f59fceab658618f","fromNode":"156710187cb064b3","fromSide":"bottom","toNode":"227cadb9e0a209cd","toSide":"top","label":"includes"},
+		{"id":"0880b70a49284a70","fromNode":"04364829bdc29fd2","fromSide":"right","toNode":"227cadb9e0a209cd","toSide":"left"},
+		{"id":"fcc5d39306ba85d2","fromNode":"04364829bdc29fd2","fromSide":"right","toNode":"975a2f027e30dadd","toSide":"left"},
+		{"id":"96f323a585ef13a4","fromNode":"04364829bdc29fd2","fromSide":"right","toNode":"5c70dbfc1286570d","toSide":"left"},
+		{"id":"0e0296e004fe9a1a","fromNode":"04364829bdc29fd2","fromSide":"right","toNode":"934699621fba5adb","toSide":"left"}
+	]
+}
