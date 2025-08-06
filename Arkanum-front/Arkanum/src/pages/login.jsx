@@ -9,9 +9,10 @@ export default function Login() {
 
       <div className='containerInfo'>
 
+        <span>
         <p>Gerenciador <br /> de magias para</p>
-
         <h1>Dungeons<b>&</b> <br /> Dragons</h1>
+        </span>
 
         <span className='creditInfo'>
           Aplicação não oficial
@@ -30,7 +31,7 @@ export default function Login() {
 
           <h1>LOGIN</h1>
 
-          <form action>
+          <form>
             <label>
               <p>Nome de Usuário</p>
               <input

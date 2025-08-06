@@ -73,7 +73,7 @@ a:hover {
 }
 
 .containerInfo {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 30vw;
@@ -82,7 +82,7 @@ a:hover {
   background-color: #332D27;
   border: 0;
   align-items: flex-start;
-  padding-left: 8vh;
+  padding-left: 5vh;
 }
 
 .containerInfo p {
@@ -139,6 +139,9 @@ a:hover {
 }
 
 @media screen and (max-width: 1100px) {
+  .containerInfo {
+    padding-left: 3vh;
+  }
   .containerInfo h1 {
     font-size: 5vh;
   }  
@@ -160,3 +163,63 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 650px) {
+  
+  html body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .mainContainer {
+    position: fixed;
+    top: 20vh;
+    border-radius: 20px 20px 0px 0px;
+    min-width: 100vw;
+    max-height: 80vh;
+    box-sizing: border-box;
+  }
+
+  .containerInfo {
+    position: fixed;
+    top: 0px;
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    box-sizing: border-box;
+  }
+
+  .containerInfo p {
+    padding-left: 2vw;
+    margin: 0;
+  }
+
+  .creditInfo {
+    position: flex;
+    margin-top: 0;
+    text-align: right;
+  }
+
+  .containerRegister {
+    min-width: 30vh;
+    max-width: 30vh;
+  }
+
+  .textbox {
+    min-width: 30vh;
+    max-width: 30vh;
+  }
+
+  .containerRegister input {
+    min-width: 26vh;
+    max-width: 26vh;
+  }
+
+}
