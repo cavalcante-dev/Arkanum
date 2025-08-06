@@ -3,14 +3,13 @@ package io.github.cavalcante_dev.Arkanum.controller;
 import java.util.List;
 import java.util.Set;
 
+import io.github.cavalcante_dev.Arkanum.controller.dto.LoginResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import io.github.cavalcante_dev.Arkanum.controller.dto.CreateUserDTO;
@@ -23,12 +22,13 @@ import jakarta.transaction.Transactional;
 // Controlador de funções do usuário, tudo relacionado a edição e cadastro estará aqui.
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173/")
 public class UserController {
 
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-
+    
     // Construtor de Classe
 
     public UserController(UserRepository userRepository,
@@ -42,8 +42,8 @@ public class UserController {
     // Função de cadastro de usuário no sistema.
 
     @Transactional
-    @PostMapping("/cadastro")
-    public ResponseEntity<Void> newUser(@RequestBody CreateUserDTO dto) {
+    @PostMapping("/cadastro/newuser")
+    public ResponseEntity<LoginResponse> newUser(@RequestBody CreateUserDTO dto) {
 
         var basicRole = roleRepository.findByName(Role.Values.BASIC.name());
 
@@ -69,6 +69,7 @@ public class UserController {
         userRepository.save(user);
 
         return ResponseEntity.ok().build();
+
     }
 
     // Função de listar todos os usuários cadastrados, usados apenas por admins.

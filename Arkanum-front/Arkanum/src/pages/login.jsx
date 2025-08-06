@@ -1,7 +1,29 @@
 import './Style.css'
+import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import api from '../services/api'
 
 export default function Login() {
+
+  const inputUsername = useRef()
+  const inputPassword = useRef()
+
+  const navigate = useNavigate()
+
+  async function login() {
+
+    const loginResponse = await api.post('/login', {
+      username: inputUsername.current.value,
+      password: inputPassword.current.value
+    })
+
+    const token = loginResponse.data.accessToken;
+    localStorage.setItem('accessToken', token)
+
+    navigate('/welcome')
+
+  }
 
   return (
 
@@ -9,9 +31,10 @@ export default function Login() {
 
       <div className='containerInfo'>
 
-        <p>Gerenciador <br /> de magias para</p>
-
-        <h1>Dungeons<b>&</b> <br /> Dragons</h1>
+        <span>
+          <p>Gerenciador <br /> de magias para</p>
+          <h1>Dungeons<b>&</b> <br /> Dragons</h1>
+        </span>
 
         <span className='creditInfo'>
           Aplicação não oficial
@@ -30,7 +53,7 @@ export default function Login() {
 
           <h1>LOGIN</h1>
 
-          <form action>
+          <form>
             <label>
               <p>Nome de Usuário</p>
               <input
@@ -38,6 +61,7 @@ export default function Login() {
                 placeholder='No minimo 5 caracteres...'
                 minLength={5}
                 required
+                ref={inputUsername}
               />
             </label>
             <label>
@@ -47,9 +71,10 @@ export default function Login() {
                 placeholder='No minimo 5 caracteres...'
                 minLength={5}
                 required
+                ref={inputPassword}
               />
             </label>
-            <button type='submit'>ENTRAR</button>
+            <button type='button' onClick={login}>ENTRAR</button>
           </form>
 
         </div>

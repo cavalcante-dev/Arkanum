@@ -11,6 +11,7 @@ import Home from './pages/home'
 import Register from './pages/register'
 import Login from './pages/login'
 import NotFound from './pages/notfound'
+import Welcome from './pages/welcome'
 
 // Componentes Principais 
 function Main() {
@@ -24,6 +25,7 @@ function Main() {
         <Route path='/' element={<Home />} />
         <Route path="/cadastro" element={<Register />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/welcome' element={<Welcome />} />
         <Route path='*' element={<NotFound />} />
 
       </Routes>
