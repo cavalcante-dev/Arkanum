@@ -222,4 +222,28 @@ a:hover {
     max-width: 26vh;
   }
 
+  .error {
+    font-size: 2vh;
+    min-width: 30vh;
+    max-width: 30vh;
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+  }
+
+  .error span {
+    color: #FE2545;
+    margin-top: 3vh;
+    margin-bottom: 2px;
+  }
+
+  .error img {
+    width: 55vw;
+  }
+
 }
