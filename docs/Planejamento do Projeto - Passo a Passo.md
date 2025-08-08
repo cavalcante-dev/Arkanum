@@ -6,15 +6,15 @@
 - [ ] Prototipar telas e definir identidade visual utilizando o FIGMA
 	- [x] Tela de Login/Cadastro
 	- [x] Tela de Criação de Personagem
-	- [ ] Tela de Edição de Personagem
+	- [x] Tela de Edição de Personagem
 	- [ ] Tela de Seleção de Personagem
 	- [ ] Tela de Magias 
 	- [ ] Tela de Seleção de Magias
 - [ ] Banco de dados e BackEnd
-	- [ ] Criar projeto com Spring Boot
-	- [ ] Criar DB com Docker e MYSQL
-	- [ ] Modelar classes
-	- [ ] Escrever função: Fazer Cadastro e Login
+	- [x] Criar projeto com Spring Boot
+	- [x] Criar DB com Docker e MYSQL
+	- [x] Modelar classes
+	- [x] Escrever função: Fazer Cadastro e Login
 	- [ ] Escrever função: Criar Personagem
 	- [ ] Escrever função: Deletar personagem por ID
 	- [ ] Escrever função: Editar personagem por ID
@@ -22,8 +22,8 @@
 	- [ ] Escrever função: Salvar lista de magias
 	- [ ] Escrever função: Salvar espaços de magias gastos 
 - [ ] React e FrontEnd
-	- [ ] Conectar Front e Back
-	- [ ] Criar pagina de Login
+	- [x] Conectar Front e Back
+	- [x] Criar pagina de Login
 	- [ ] Criar pagina de Criação de Personagem
 	- [ ] Criar pagina de Edição de Personagem
 	- [ ] Criar pagina de Seleção de Personagem

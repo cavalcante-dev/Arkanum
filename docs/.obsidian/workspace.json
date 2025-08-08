@@ -11,14 +11,17 @@
             "id": "87c17b3a507cd493",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Registros/Testes Para Login.md",
-                "mode": "source",
-                "source": false
+                "file": "Diagramas/Diagramas de Entidades Relacionais.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "Testes Para Login"
+              "icon": "lucide-layout-dashboard",
+              "title": "Diagramas de Entidades Relacionais"
             }
           },
           {
@@ -187,12 +190,12 @@
   },
   "active": "87c17b3a507cd493",
   "lastOpenFiles": [
-    "Planejamento do Projeto - Passo a Passo.md",
-    "Registros/Testes Para Login.md",
-    "Ficha Magias D&D - Requisitos.md",
     "Diagramas/Diagramas de Classe.canvas",
     "Diagramas/Diagramas de Entidades Relacionais.canvas",
     "Diagramas/Casos de Uso.canvas",
+    "Planejamento do Projeto - Passo a Passo.md",
+    "Ficha Magias D&D - Requisitos.md",
+    "Registros/Testes Para Login.md",
     "Diagramas/Untitled.md",
     "Diagramas"
   ]
