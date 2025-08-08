@@ -7,7 +7,7 @@ export default function NotFound() {
         <>
             <div className='error'>
                 <img src="./src/assets/404NotFound.svg" />
-                <span>FALHA CRÍTICA - ERROR 404 :(</span>
+                <span>FALHA CRÍTICA - ERROR 404</span>
                 <p>PÁGINA NÃO ENCONTRADA</p>
             </div>
         </>

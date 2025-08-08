@@ -72,6 +72,14 @@ a:hover {
   border: 3px solid #332D27;  
 }
 
+.textboxHome {
+  border-radius: 8px;
+  padding: 3vh;
+  box-shadow: 6px 6px 0px #332D27;
+  border: 3px solid #332D27;  
+}
+
+
 .containerInfo {
   position: fixed;
   top: 0;
@@ -215,6 +223,10 @@ a:hover {
   .textbox {
     min-width: 30vh;
     max-width: 30vh;
+  }
+
+  .textboxHome {
+    font-size: 4vw;
   }
 
   .containerRegister input {

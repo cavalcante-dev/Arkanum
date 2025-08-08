@@ -2,7 +2,7 @@ import './Style.css'
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import api from '../services/api'
+import api from '../services/Api'
 
 export default function Login() {
 
@@ -24,7 +24,7 @@ export default function Login() {
     navigate('/welcome')
 
   }
-
+  
   return (
 
     <div className='main'>
@@ -87,5 +87,6 @@ export default function Login() {
 
     </div>
   )
+
 
 }
