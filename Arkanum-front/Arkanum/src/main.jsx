@@ -2,6 +2,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PrivateRoute from './services/PrivateRoute'
+import api from './services/Api'
 
 // Importação de estilos
 import './index.css'
@@ -24,8 +26,12 @@ function Main() {
 
         <Route path='/' element={<Home />} />
         <Route path="/cadastro" element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/welcome' element={<Welcome />} />
+
+        <Route path='/login' element={<Login />}/>
+
+        <Route path='/welcome' element={<PrivateRoute/>}>
+            <Route path='/welcome' element={<Welcome/>}/>
+        </Route>
         <Route path='*' element={<NotFound />} />
 
       </Routes>

@@ -10,6 +10,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +26,7 @@ public class TokenController {
 
     private final JwtEncoder jwtEncoder;
     private final UserRepository userRepository;
-    private BCryptPasswordEncoder passwordEncoder;
+    private final BCryptPasswordEncoder passwordEncoder;
 
     public TokenController(JwtEncoder jwtEncoder,
                            UserRepository userRepository,
@@ -72,5 +74,7 @@ public class TokenController {
         return ResponseEntity.ok(new LoginResponse(jwtValeu, expiresIn));
 
     }
+
+
 
 }

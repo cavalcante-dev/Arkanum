@@ -1,8 +1,7 @@
 import './Style.css'
 import { Link, useNavigate } from 'react-router-dom'
-import api from '../services/api'
+import api from '../services/Api'
 import { useRef, useState } from 'react'
-import Welcome from './welcome'
 
 export default function Register() {
 

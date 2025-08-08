@@ -2,6 +2,7 @@ package io.github.cavalcante_dev.Arkanum.controller;
 
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 import io.github.cavalcante_dev.Arkanum.controller.dto.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -79,6 +81,16 @@ public class UserController {
     public ResponseEntity<List<User>> listUsers() {
         var users = userRepository.findAll();
         return ResponseEntity.ok(users);
+    }
+
+    @GetMapping("/welcome")
+    public ResponseEntity<String> getUserName(JwtAuthenticationToken token) {
+        var user = userRepository.findById(UUID.fromString(token.getName()));
+        if (user.isPresent()) {
+            return ResponseEntity.ok(user.get().getName());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }
