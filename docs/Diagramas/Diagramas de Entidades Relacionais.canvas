@@ -1,1 +1,9 @@
-{}
+{
+	"nodes":[
+		{"id":"4be72b4d139e2229","type":"text","text":"##### FICHA DE PERSONAGEM\n- characterLevel\n- characterName\n- characterClass\n- knownSpells\n- spellsSlots","x":105,"y":-110,"width":300,"height":220},
+		{"id":"3fd0ab4c87292f0a","type":"text","text":"##### USUARIO\n- username\n- displayName\n- password","x":-405,"y":-80,"width":250,"height":160}
+	],
+	"edges":[
+		{"id":"18392ad2b4969167","fromNode":"3fd0ab4c87292f0a","fromSide":"right","toNode":"4be72b4d139e2229","toSide":"left","color":"2","label":"CRIA\n1... * / * ...1"}
+	]
+}
