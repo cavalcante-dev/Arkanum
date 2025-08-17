@@ -11,17 +11,14 @@
             "id": "87c17b3a507cd493",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Diagramas/Diagramas de Classe.canvas",
-                "viewState": {
-                  "x": 160.652725289517,
-                  "y": 1.9989940729224145,
-                  "zoom": 0.03120468393786957
-                }
+                "file": "Registros/2. Criação de Personagem.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Diagramas de Classe"
+              "icon": "lucide-file",
+              "title": "2. Criação de Personagem"
             }
           },
           {
@@ -190,12 +187,13 @@
   },
   "active": "87c17b3a507cd493",
   "lastOpenFiles": [
+    "Registros/1. Testes Para Login.md",
+    "Registros/2. Criação de Personagem.md",
+    "Diagramas/Diagramas de Classe.canvas",
     "Diagramas/Casos de Uso.canvas",
     "Planejamento do Projeto - Passo a Passo.md",
     "Ficha Magias D&D - Requisitos.md",
     "Diagramas/Diagramas de Entidades Relacionais.canvas",
-    "Diagramas/Diagramas de Classe.canvas",
-    "Registros/Testes Para Login.md",
     "Diagramas/Untitled.md",
     "Diagramas"
   ]

@@ -3,11 +3,8 @@ package io.github.cavalcante_dev.Arkanum.services;
 import com.nimbusds.jose.shaded.gson.Gson;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Service
-public class SpellsSlots {
+public class SpellsSlotsServices {
 
     public String defineSpellsByLevel (Integer characterClass, Integer characterLevel) {
 
