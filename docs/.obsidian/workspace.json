@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Diagramas/Diagramas de Entidades Relacionais.canvas",
+                "file": "Diagramas/Diagramas de Classe.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
+                  "x": 160.652725289517,
+                  "y": 1.9989940729224145,
+                  "zoom": 0.03120468393786957
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Diagramas de Entidades Relacionais"
+              "title": "Diagramas de Classe"
             }
           },
           {
@@ -190,11 +190,11 @@
   },
   "active": "87c17b3a507cd493",
   "lastOpenFiles": [
-    "Diagramas/Diagramas de Classe.canvas",
-    "Diagramas/Diagramas de Entidades Relacionais.canvas",
     "Diagramas/Casos de Uso.canvas",
     "Planejamento do Projeto - Passo a Passo.md",
     "Ficha Magias D&D - Requisitos.md",
+    "Diagramas/Diagramas de Entidades Relacionais.canvas",
+    "Diagramas/Diagramas de Classe.canvas",
     "Registros/Testes Para Login.md",
     "Diagramas/Untitled.md",
     "Diagramas"

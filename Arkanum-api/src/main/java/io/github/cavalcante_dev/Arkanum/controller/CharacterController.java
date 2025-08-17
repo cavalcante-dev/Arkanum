@@ -4,9 +4,12 @@ import io.github.cavalcante_dev.Arkanum.controller.dto.CreatCharacterDTO;
 import io.github.cavalcante_dev.Arkanum.entitys.CharacterSheet;
 import io.github.cavalcante_dev.Arkanum.repository.CharacterSheetRepository;
 import io.github.cavalcante_dev.Arkanum.repository.UserRepository;
+import io.github.cavalcante_dev.Arkanum.services.SpellsSlots;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +23,8 @@ public class CharacterController {
 
     private final CharacterSheetRepository characterSheetRepository;
     private final UserRepository userRepository;
+    @Autowired
+    private SpellsSlots spellsSlots;
 
     public CharacterController(CharacterSheetRepository characterSheetRepository,
                                UserRepository userRepository) {
@@ -45,6 +50,10 @@ public class CharacterController {
         characterSheet.setName(dto.name());
         characterSheet.setCharacterLevel(dto.characterLevel());
         characterSheet.setCharacterClass(dto.characterClass());
+
+        String spellsSlotsTotal = spellsSlots.defineSpellsByLevel(dto.characterClass(), dto.characterLevel());
+
+        characterSheet.setJsonSpellSlots(spellsSlotsTotal);
 
         characterSheetRepository.save(characterSheet);
 
