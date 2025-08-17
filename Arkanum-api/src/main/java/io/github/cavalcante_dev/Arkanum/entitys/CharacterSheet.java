@@ -1,9 +1,11 @@
 package io.github.cavalcante_dev.Arkanum.entitys;
 
+import com.nimbusds.jose.shaded.gson.JsonArray;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.Instant;
+import java.util.List;
 
 // Entidade de ficha de personagem é criada e associada ao usuário
 
@@ -12,7 +14,15 @@ import java.time.Instant;
 public class CharacterSheet {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "sequence_generator"
+    )
+    @SequenceGenerator(
+            name = "sequence_generator",
+            sequenceName = "tb_chatacter_sheet_sequence",
+            allocationSize = 1
+    )
     @Column(name = "character_id")
     private Long characterId;
 
@@ -22,10 +32,19 @@ public class CharacterSheet {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @JoinColumn(name = "character_name")
     private String name;
+
+    @JoinColumn(name = "character_class")
     private Integer characterClass;
+
+    @JoinColumn(name = "character_level")
     private Integer characterLevel;
+
     // private String characterImg; - Adicionar posteriormente
+
+    @JoinColumn(name = "jsonSpellSlots")
+    private String jsonSpellSlots;
 
     @CreationTimestamp
     private Instant createdTimeStamp;
@@ -73,6 +92,14 @@ public class CharacterSheet {
 
     public void setCharacterLevel(Integer characterLevel) {
         this.characterLevel = characterLevel;
+    }
+
+    public String getJsonSpellSlots() {
+        return jsonSpellSlots;
+    }
+
+    public void setJsonSpellSlots(String jsonSpellSlots) {
+        this.jsonSpellSlots = jsonSpellSlots;
     }
 
     /*

@@ -5,7 +5,6 @@ import java.util.Set;
 import java.util.UUID;
 
 import io.github.cavalcante_dev.Arkanum.controller.dto.LoginResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
