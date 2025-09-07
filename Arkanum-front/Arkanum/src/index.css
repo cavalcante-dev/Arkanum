@@ -35,6 +35,7 @@ button:active {
 }
 
 input {
+  font-family: Inconsolata;
   background-color: #D9D0B7;
   border: 0.3vh solid #332D27;
   padding: 8px;
@@ -42,6 +43,35 @@ input {
 }
 
 input:focus {
+  font-family: Inconsolata;
+  background-color: #c9b098;
+  box-shadow: -4px 4px 0px #968572 inset;
+}
+
+select {
+  font-family: Inconsolata;
+  background-color: #D9D0B7;
+  border: 0.3vh solid #332D27;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+select:focus {
+  font-family: Inconsolata;
+  background-color: #c9b098;
+  box-shadow: -4px 4px 0px #968572 inset;
+}
+
+textarea {
+  font-family: Inconsolata;
+  background-color: #D9D0B7;
+  border: 0.3vh solid #332D27;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+textarea:focus {
+  font-family: Inconsolata;
   background-color: #c9b098;
   box-shadow: -4px 4px 0px #968572 inset;
 }

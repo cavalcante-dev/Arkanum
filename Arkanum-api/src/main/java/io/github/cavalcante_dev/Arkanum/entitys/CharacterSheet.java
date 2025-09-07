@@ -46,6 +46,9 @@ public class CharacterSheet {
     @JoinColumn(name = "jsonSpellSlots")
     private String jsonSpellSlots;
 
+    @JoinColumn(name = "character_description")
+    private String characterDescription;
+
     @CreationTimestamp
     private Instant createdTimeStamp;
 

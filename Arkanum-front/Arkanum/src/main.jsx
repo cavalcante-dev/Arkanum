@@ -14,6 +14,8 @@ import Register from './pages/register'
 import Login from './pages/login'
 import NotFound from './pages/notfound'
 import Welcome from './pages/welcome'
+import CreatCharacter from './pages/createCharacter'
+import MyCharacters from './pages/myCharacters'
 
 // Componentes Principais 
 function Main() {
@@ -33,6 +35,15 @@ function Main() {
             <Route path='/welcome' element={<Welcome/>}/>
         </Route>
         <Route path='*' element={<NotFound />} />
+
+        <Route path='/criarpersonagem' element={<PrivateRoute/>}>
+            <Route path='/criarpersonagem' element={<CreatCharacter />}/>
+        </Route>
+        
+        <Route path='/meuspersonagens' element={<PrivateRoute/>}>
+            <Route path='/meuspersonagens' element={<MyCharacters />}/>
+        </Route>
+
 
       </Routes>
 
