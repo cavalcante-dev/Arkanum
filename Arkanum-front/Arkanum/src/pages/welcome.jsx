@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import './Style.css'
 import api from '../services/Api'
+import { Link } from 'react-router-dom'
 
 export default function Welcome() {
 
@@ -19,7 +20,7 @@ export default function Welcome() {
 
     useEffect(() => {
         getUserName()
-    }, []) 
+    }, [])
 
     return (
 
@@ -35,15 +36,19 @@ export default function Welcome() {
             </div>
 
             <div className="mainContainer">
-                <div className="containerRegister">
-                    <h1>
+                <div className="containerWelcome">
+                    <h1 className='welcomeMessage'>
                         Olá, {userName} <br />
                         BEM VINDO AO ARKANUM!
                     </h1>
+                    <div className='textbox'>
+                        <p><Link to="/criarpersonagem">Criar Novo Personagem</Link></p>
+                    </div>
+                    <div className='textbox'>
+                        <p><Link to="/meuspersonagens">Meus Personagens</Link></p>
+                    </div>
                 </div>
             </div>
-
-
         </div>
 
     )

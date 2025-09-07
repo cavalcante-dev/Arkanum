@@ -15,12 +15,12 @@
 	- [x] Criar DB com Docker e MYSQL
 	- [x] Modelar classes
 	- [x] Escrever função: Fazer Cadastro e Login
-	- [ ] Escrever função: Criar Personagem
+	- [x] Escrever função: Criar Personagem
 	- [ ] Escrever função: Deletar personagem por ID
 	- [ ] Escrever função: Editar personagem por ID
-	- [ ] Escrever função: Calcular espaços de magias 
+	- [x] Escrever função: Calcular espaços de magias 
 	- [ ] Escrever função: Salvar lista de magias
-	- [ ] Escrever função: Salvar espaços de magias gastos 
+	- [ ] (OPCIONAL) Escrever função: Salvar espaços de magias gastos 
 - [ ] React e FrontEnd
 	- [x] Conectar Front e Back
 	- [x] Criar pagina de Login
