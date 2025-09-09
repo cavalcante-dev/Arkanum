@@ -11,17 +11,14 @@
             "id": "87c17b3a507cd493",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Diagramas/Diagramas de Classe.canvas",
-                "viewState": {
-                  "x": 177.38358778625957,
-                  "y": 73.49618320610688,
-                  "zoom": 0.36453801727120294
-                }
+                "file": "Planejamento do Projeto - Passo a Passo.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Diagramas de Classe"
+              "icon": "lucide-file",
+              "title": "Planejamento do Projeto - Passo a Passo"
             }
           },
           {
@@ -180,6 +177,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -190,11 +188,11 @@
   },
   "active": "87c17b3a507cd493",
   "lastOpenFiles": [
-    "Planejamento do Projeto - Passo a Passo.md",
     "Ficha Magias D&D - Requisitos.md",
+    "Diagramas/Diagramas de Classe.canvas",
+    "Planejamento do Projeto - Passo a Passo.md",
     "Registros/2. Criação de Personagem.md",
     "Registros/1. Testes Para Login.md",
-    "Diagramas/Diagramas de Classe.canvas",
     "Diagramas/Casos de Uso.canvas",
     "Diagramas/Diagramas de Entidades Relacionais.canvas",
     "Diagramas/Untitled.md",

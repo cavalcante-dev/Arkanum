@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: Arcanum
+
+  config:
+    import: application.secret.properties
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    url: ${app.db.path}
+    username: ${app.db.user}
+    password: ${app.db.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  level:
+    org.springframework.security: TRACE
+    org.springframework.web: DEBUG
+
+jwt:
+  public:
+    key: ${PUBLIC_KEY}
+  private:
+    key: ${PRIVATE_KEY}
+
+app:
+  admin:
+    user: ${ADMIN_USER}
+    password: ${ADMIN_SENHA}

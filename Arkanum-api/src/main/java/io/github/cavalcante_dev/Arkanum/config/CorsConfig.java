@@ -1,4 +1,4 @@
-package io.github.cavalcante_dev.Arkanum;
+package io.github.cavalcante_dev.Arkanum.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

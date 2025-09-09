@@ -33,6 +33,7 @@ export default function CreatCharacter() {
                             <option value="6">Mago</option>
                             <option value="7">Paladino</option>
                             <option value="8">Patrulheiro</option>
+                            <option value="9">Multiclasse</option>
                         </select>
                     </div>
                     <div className="div3">
@@ -55,9 +56,6 @@ export default function CreatCharacter() {
                 </div>
                 <button className="buttonAdvance" type='button' >AVANÇAR</button>
             </div>
-
-
-
 
         </div>
 

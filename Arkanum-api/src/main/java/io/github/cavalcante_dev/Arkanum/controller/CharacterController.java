@@ -5,8 +5,7 @@ import io.github.cavalcante_dev.Arkanum.entitys.CharacterSheet;
 import io.github.cavalcante_dev.Arkanum.repository.CharacterSheetRepository;
 import io.github.cavalcante_dev.Arkanum.repository.UserRepository;
 import io.github.cavalcante_dev.Arkanum.services.CharacterSheetServices;
-import io.github.cavalcante_dev.Arkanum.services.SpellsSlotsServices;
-import org.springframework.beans.factory.annotation.Autowired;
+import io.github.cavalcante_dev.Arkanum.services.SpellsSlotServices;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
@@ -21,14 +20,14 @@ public class CharacterController {
 
     private final CharacterSheetRepository characterSheetRepository;
     private final UserRepository userRepository;
-    private SpellsSlotsServices spellsSlotsServices;
+    private SpellsSlotServices spellsSlotServices;
     private CharacterSheetServices characterSheetServices;
 
     public CharacterController(CharacterSheetRepository characterSheetRepository,
-                               UserRepository userRepository, SpellsSlotsServices spellsSlotsServices, CharacterSheetServices characterSheetServices) {
+                               UserRepository userRepository, SpellsSlotServices spellsSlotServices, CharacterSheetServices characterSheetServices) {
         this.characterSheetRepository = characterSheetRepository;
         this.userRepository = userRepository;
-        this.spellsSlotsServices = spellsSlotsServices;
+        this.spellsSlotServices = spellsSlotServices;
         this.characterSheetServices = characterSheetServices;
     }
 
@@ -51,7 +50,7 @@ public class CharacterController {
         characterSheet.setCharacterLevel(dto.characterLevel());
         characterSheet.setCharacterClass(dto.characterClass());
 
-        String spellsSlotsTotal = spellsSlotsServices.defineSpellsByLevel(dto.characterClass(), dto.characterLevel());
+        String spellsSlotsTotal = spellsSlotServices.defineSpellsByLevel(dto.characterClass(), dto.characterLevel());
 
         characterSheet.setJsonSpellSlots(spellsSlotsTotal);
 
