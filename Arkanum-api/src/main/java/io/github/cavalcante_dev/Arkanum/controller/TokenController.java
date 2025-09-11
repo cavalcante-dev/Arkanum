@@ -50,7 +50,7 @@ public class TokenController {
         // Tempo de Expiração do token.
 
         var now = Instant.now();
-        var expiresIn = 300L;
+        var expiresIn = 30000L;
 
         // Define o escopo que será mostrado no JWT
 

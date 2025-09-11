@@ -1,5 +1,6 @@
 package io.github.cavalcante_dev.Arkanum.controller;
 
+import com.google.gson.Gson;
 import io.github.cavalcante_dev.Arkanum.controller.dto.CreatCharacterDTO;
 import io.github.cavalcante_dev.Arkanum.entitys.CharacterSheet;
 import io.github.cavalcante_dev.Arkanum.repository.CharacterSheetRepository;
@@ -33,7 +34,7 @@ public class CharacterController {
 
     //Cria o personagem e o associa a um usuário.
 
-    @PostMapping("/criarpersonagem")
+    @PostMapping("/criarpersonagem/novopersonagem")
     public ResponseEntity<Void> creatCharacter(@RequestBody CreatCharacterDTO dto,
                                                JwtAuthenticationToken token) {
 
@@ -49,6 +50,7 @@ public class CharacterController {
         characterSheet.setName(dto.name());
         characterSheet.setCharacterLevel(dto.characterLevel());
         characterSheet.setCharacterClass(dto.characterClass());
+        characterSheet.setCharacterDescription(dto.characterDescription());
 
         String spellsSlotsTotal = spellsSlotServices.defineSpellsByLevel(dto.characterClass(), dto.characterLevel());
 
@@ -58,6 +60,13 @@ public class CharacterController {
 
         return ResponseEntity.ok().build();
 
+    }
+
+    @GetMapping("/criarpersonagem/checkspells")
+    public ResponseEntity<String> checkSpell(@RequestParam int characterClass, @RequestParam int characterLevel, JwtAuthenticationToken token) {
+        String spellSlots;
+        spellSlots = spellsSlotServices.defineSpellsByLevel(characterClass, characterLevel);
+        return ResponseEntity.ok(spellSlots);
     }
 
     @GetMapping("/personagens/{userID}")
