@@ -24,7 +24,7 @@ export default function Login() {
     navigate('/welcome')
 
   }
-  
+
   return (
 
     <div className='main'>

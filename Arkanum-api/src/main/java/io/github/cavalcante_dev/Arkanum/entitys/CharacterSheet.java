@@ -105,15 +105,13 @@ public class CharacterSheet {
         this.jsonSpellSlots = jsonSpellSlots;
     }
 
-    /*
-    public String getCharacterImg() {
-        return characterImg;
+    public String getCharacterDescription() {
+        return characterDescription;
     }
 
-    public void setCharacterImg(String characterImg) {
-        this.characterImg = characterImg;
+    public void setCharacterDescription(String characterDescription) {
+        this.characterDescription = characterDescription;
     }
-    */
 
     public Instant getCreatedTimeStamp() {
         return createdTimeStamp;
